@@ -1,0 +1,19 @@
+{
+  "name": "api-restful-favoritos",
+  "version": "1.0.0",
+  "description": "Proyecto de Api Restful del curso NodeJS y Angular de Israel Martinez",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Israel Martinez",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
