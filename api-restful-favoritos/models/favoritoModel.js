@@ -3,10 +3,11 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var favoritoSchema = Schema({
+// mongoose.Promise = global.Promise;
+var FavoritoSchema = Schema({
     title: String,
     description: String,
     url: String
 });
 
-module.exports = mongoose.model('Favorito', favoritoSchema);
+module.exports = mongoose.model('Favorito', FavoritoSchema);
