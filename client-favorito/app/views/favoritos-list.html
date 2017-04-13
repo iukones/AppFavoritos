@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <strong>{{title}}</strong>
+    <br>
+    <div class="container">
+      <br>
+      <button (click)="showFavoritos()" *ngIf="favoritosVisibles == false">Mostrar favoritos</button>
+      <button (click)="hideFavoritos()" *ngIf="favoritosVisibles == true">Ocultar favoritos</button>
+
+      <ul id="favoritos" *ngIf="favoritosVisibles == true">
+        <li *ngFor="let favorito of favoritos">{{favorito}}</li>
+      </ul>
+
+    </div>
+  </body>
+</html>
