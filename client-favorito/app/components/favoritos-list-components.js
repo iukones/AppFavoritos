@@ -13,7 +13,13 @@ var core_1 = require("@angular/core");
 var FavoritosListComponents = (function () {
     function FavoritosListComponents() {
         this.title = 'Listado de Marcadores:';
-        this.favoritos = ['iukones.com', 'twitter.com/iukones', 'facebook.com/iukones', 'google.com/iukones'];
+        this.favoritos = [
+            'iukones.com',
+            'twitter.com/iukones',
+            'facebook.com/iukones',
+            'google.com/iukones',
+            'linkedin.com/iukones'
+        ];
         this.favoritosVisibles = false;
     }
     FavoritosListComponents.prototype.showFavoritos = function () {
