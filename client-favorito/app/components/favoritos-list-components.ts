@@ -9,6 +9,7 @@ export class FavoritosListComponents {
     public title: String;
     public favoritos: Array<string>;
     public favoritosVisibles: boolean;
+    public color: String;
 
     constructor() {
         this.title = 'Listado de Marcadores:';
@@ -25,7 +26,13 @@ export class FavoritosListComponents {
     showFavoritos() {
         this.favoritosVisibles = true;
     }
+
     hideFavoritos() {
         this.favoritosVisibles = false;
     }
+
+    changeColor(){
+      console.log(this.color);
+    }
+
 }

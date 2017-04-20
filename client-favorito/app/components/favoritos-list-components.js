@@ -28,6 +28,9 @@ var FavoritosListComponents = (function () {
     FavoritosListComponents.prototype.hideFavoritos = function () {
         this.favoritosVisibles = false;
     };
+    FavoritosListComponents.prototype.changeColor = function () {
+        console.log(this.color);
+    };
     return FavoritosListComponents;
 }());
 FavoritosListComponents = __decorate([

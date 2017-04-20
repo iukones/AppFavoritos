@@ -12,8 +12,8 @@ export class AppComponent {
   public title: String;
   public description: String;
   constructor() {
-    this.title = 'Otro titulo desde constructor';
-    this.description = 'Aplicacion web SPA con angular2'
+    this.title = 'APP Favoritos web';
+    this.description = 'Aplicación web SPA con Angular 2'
   }
 
 }
