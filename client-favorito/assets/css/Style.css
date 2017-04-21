@@ -14,7 +14,7 @@ body {
   margin-top: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px #ddd;
+  box-shadow: 0 0 5px #ddd;
   background: #eee;
 
 }
@@ -32,7 +32,7 @@ header .title-subtitle {
   padding-left: 50px;
 }
 header h1, header p {
-  margin: 0px;
+  margin: 0;
   margin-left: 15px;
 }
 header p{

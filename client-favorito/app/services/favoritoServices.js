@@ -10,18 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var FavoritosListComponents = (function () {
-    function FavoritosListComponents() {
-        this.title = 'Listado de Marcadores:';
+var http_1 = require("@angular/http");
+require("rxjs/add/operator/map");
+var FavoritoService = (function () {
+    function FavoritoService(_http) {
+        this._http = _http;
+        this.url = 'http://';
     }
-    return FavoritosListComponents;
+    return FavoritoService;
 }());
-FavoritosListComponents = __decorate([
-    core_1.Component({
-        selector: 'favoritos-list',
-        templateUrl: 'app/views/favoritos-list.html'
-    }),
-    __metadata("design:paramtypes", [])
-], FavoritosListComponents);
-exports.FavoritosListComponents = FavoritosListComponents;
-//# sourceMappingURL=favoritos-list-components.js.map
+FavoritoService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], FavoritoService);
+exports.FavoritoService = FavoritoService;
+//# sourceMappingURL=favoritoServices.js.map
