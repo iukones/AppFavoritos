@@ -7,9 +7,12 @@ import { Favorito } from '../models/favoritoModels';
 @Injectable()
 export class FavoritoService{
   public url: String;
-  
-  constructor(private _http: Http){
-    this.url = 'http://localhost:3000/api/';
 
+  constructor(private _http: Http){
+    this.url = 'http://localhost:3001/api/';
+  }
+
+  getFavoritos(){
+    return this._http.get(this.url+'favorito').map(res => res.json());
   }
 }

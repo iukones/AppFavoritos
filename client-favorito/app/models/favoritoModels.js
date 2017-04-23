@@ -1,10 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Favorito = (function () {
-    function Favorito(title, description, url) {
-        this.title = title;
+    function Favorito(name, description, category, price, picture) {
+        this.name = name;
         this.description = description;
-        this.url = url;
+        this.category = category;
+        this.price = price;
+        this.picture = picture;
     }
     return Favorito;
 }());

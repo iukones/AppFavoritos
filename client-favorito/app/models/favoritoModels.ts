@@ -1,7 +1,9 @@
 export class Favorito{
   constructor(
-    public title: String,
+    public name: String,
     public description: String,
-    public url: String
+    public category: String,
+    public price: Number,
+    public picture: String
   ){}
 }

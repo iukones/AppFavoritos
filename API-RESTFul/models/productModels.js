@@ -3,7 +3,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const ProductSchema = Schema({
+const FavoritoSchema = Schema({
     name: String,
     picture: String,
     price: {
@@ -14,7 +14,8 @@ const ProductSchema = Schema({
         type: String,
         enum: ['computers', 'phones', 'accesories']
     },
-    description: String
+    description: String,
+    url: String
 })
 
-module.exports = mongoose.model('product', ProductSchema)
+module.exports = mongoose.model('Favorito', FavoritoSchema)

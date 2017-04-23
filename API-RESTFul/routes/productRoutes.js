@@ -1,7 +1,7 @@
 'use strict'
 
 const express = require('express')
-const productCtrl = require('../controllers/productController')
+const favoritoCtrl = require('../controllers/productController')
 const api = express.Router()
 
 // app.get('/iukones/:name', (req, res) => {
@@ -9,14 +9,14 @@ const api = express.Router()
 // })
 
 // peticion tipo GET a product
-api.get('/product', productCtrl.getProducts)
+api.get('/favorito', favoritoCtrl.getFavoritos)
 // peticion tipo GET especifica al elemento productId
-api.get('/product/:productId', productCtrl.getProduct)
+api.get('/favorito/:favoritosId', favoritoCtrl.getFavorito)
 // peticion tipo POST a product
-api.post('/product', productCtrl.saveProduct)
+api.post('/favorito', favoritoCtrl.saveFavorito)
 // peticion tipo PUT para actualizar productId
-api.put('/product/:productId', productCtrl.updateProduct)
+api.put('/favorito/:favoritosId', favoritoCtrl.updateFavorito)
 // peticion tipo DELETE a product en base de datos.
-api.delete('/product/:productId', productCtrl.deleteProduct)
+api.delete('/favorito/:favoritosId', favoritoCtrl.deleteFavorito)
 
 module.exports = api
