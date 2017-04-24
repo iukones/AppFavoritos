@@ -1,17 +1,19 @@
-<strong>{{title}}</strong>
+
 <ul id="favoritos-list">
   <li *ngFor="let favorito of favoritos" class="favorito-item">
-    <h4>{{favorito.name}}</h4>
-    <p class="descripcion">{{favorito.description}}</p>
-    <p class="category">{{favorito.category}}</p>
-    <p class="price">{{favorito.price}}</p>
-    <p class="picture">{{favorito.picture}}</p>
-    <p class="url">{{favorito.url}}</p>
-    <p class="buttons">
-      <a href="">ver marcador</a>
-      <a href="">Editar</a>
-      <a href="">Eliminar</a>
-    </p>
+    <div class="content-data">
+      <h4>{{favorito.name}}</h4>
+      <!-- <p class="descripcion">{{favorito.description}}</p>
+      <p class="category">{{favorito.category}}</p>
+      <p class="price">{{favorito.price}}</p>
+      <p class="picture">{{favorito.picture}}</p> -->
+      <p class="url">{{favorito.url}}</p>
+      <p class="buttons">
+        <a href="" class="btn btn-default">Ir al marcador</a>
+        <a href="" class="btn btn-ver">ver</a>
+        <a href="" class="btn btn-editar">Editar</a>
+        <a href="" class="btn btn-Eliminar">Eliminar</a>
+      </p>
+    </div>
   </li>
-
 </ul>
