@@ -1,7 +1,6 @@
 //Importar Component desde el núcleo de Angular
 import {Component, OnInit} from '@angular/core';
-import {Router, ActivatedRoute, Params} from '@angular/router';
-
+import {Router, ActivatedRoute, Params} from '@angular/router'
 import {FavoritoService} from '../services/favoritoServices';
 import {Favorito} from '../models/favoritoModels';
 
@@ -14,6 +13,8 @@ import {Favorito} from '../models/favoritoModels';
 
 //Clase del componente donde irán los datos y funcionalidades
 export class FavoritoDetailComponents implements OnInit {
+  public favorito: Favorito[];
+  public errorMessage;
 
   constructor(
     private _favoritoService: FavoritoService,
@@ -23,6 +24,7 @@ export class FavoritoDetailComponents implements OnInit {
 
   ngOnInit(){
     this.getFavorito();
+    console.log('FavoritoDetailComponents cargado!!');
   }
 
   getFavorito(){

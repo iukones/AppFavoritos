@@ -22,6 +22,7 @@ var FavoritoDetailComponents = (function () {
     }
     FavoritoDetailComponents.prototype.ngOnInit = function () {
         this.getFavorito();
+        console.log('FavoritoDetailComponents cargado!!');
     };
     FavoritoDetailComponents.prototype.getFavorito = function () {
         var _this = this;

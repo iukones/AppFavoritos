@@ -12,7 +12,7 @@ export class AppComponent {
   public title: String;
   public description: String;
   constructor() {
-    this.title = 'APP Favoritos web';
+    this.title = 'APP Favoritos Web';
     this.description = 'Aplicación web SPA con Angular 2'
   }
 

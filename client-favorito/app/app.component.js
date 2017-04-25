@@ -14,7 +14,7 @@ var core_1 = require("@angular/core");
 //Decorador component, indicamos en que etiqueta se va a cargar la plantilla
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'APP Favoritos web';
+        this.title = 'APP Favoritos Web';
         this.description = 'Aplicación web SPA con Angular 2';
     }
     return AppComponent;
