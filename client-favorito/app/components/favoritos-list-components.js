@@ -15,6 +15,8 @@ var FavoritosListComponents = (function () {
     function FavoritosListComponents(_favoritoService) {
         this._favoritoService = _favoritoService;
         this.title = 'Listado de Marcadores:';
+        // se agrega imagen de cargar o loading
+        this.loading = true;
     }
     FavoritosListComponents.prototype.ngOnInit = function () {
         var _this = this;
@@ -24,6 +26,9 @@ var FavoritosListComponents = (function () {
             _this.favoritos = result.favoritos;
             if (!_this.favoritos) {
                 alert('Error en el servidor');
+            }
+            else {
+                _this.loading = false;
             }
         }, function (error) {
             _this.errorMessage = error;

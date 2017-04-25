@@ -41,6 +41,7 @@ function saveFavorito(req, res) {
     favorito.price = req.body.price
     favorito.category = req.body.category
     favorito.description = req.body.description
+    favorito.url = req.body.url
 
     favorito.save((err, favoritoStored) => {
         if (err) res.status(500).send({

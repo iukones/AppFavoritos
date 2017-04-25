@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-
+import {Router, ActivatedRoute, Params} from '@angular/router'
 import {FavoritoService} from '../services/favoritoServices';
 import {Favorito} from '../models/favoritoModels';
 
@@ -11,6 +11,9 @@ import {Favorito} from '../models/favoritoModels';
 })
 export class FavoritosListComponents implements OnInit{
     public title: String;
+    // se agrega imagen de cargar o loading
+    public loading: boolean;
+    // fin imagen loadin
     public favoritos: Favorito[];
     public errorMessage;
 
@@ -18,6 +21,8 @@ export class FavoritosListComponents implements OnInit{
         private _favoritoService: FavoritoService
     ) {
         this.title = 'Listado de Marcadores:';
+        // se agrega imagen de cargar o loading
+        this.loading = true;
     }
 
     ngOnInit(){
@@ -28,6 +33,8 @@ export class FavoritosListComponents implements OnInit{
                 this.favoritos = result.favoritos;
                 if(!this.favoritos){
                     alert('Error en el servidor');
+                }else{
+                    this.loading = false;
                 }
             },
             error => {

@@ -10,8 +10,10 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
+var appRoutes_1 = require("./routes/appRoutes");
 var app_component_1 = require("./app.component");
 var favoritos_list_components_1 = require("./components/favoritos-list-components");
+var favorito_detail_components_1 = require("./components/favorito-detail-components");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -22,11 +24,16 @@ AppModule = __decorate([
         imports: [
             platform_browser_1.BrowserModule,
             forms_1.FormsModule,
-            http_1.HttpModule
+            http_1.HttpModule,
+            appRoutes_1.routing
         ],
         declarations: [
             app_component_1.AppComponent,
-            favoritos_list_components_1.FavoritosListComponents
+            favoritos_list_components_1.FavoritosListComponents,
+            favorito_detail_components_1.FavoritoDetailComponents
+        ],
+        providers: [
+            appRoutes_1.appRoutingProviders
         ],
         bootstrap: [
             app_component_1.AppComponent
