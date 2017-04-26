@@ -23,7 +23,7 @@ var FavoritoAddComponents = (function () {
         this.title = "Crear Marcador Favorito";
     }
     FavoritoAddComponents.prototype.ngOnInit = function () {
-        this.favorito = new favoritoModels_1.Favorito("", "", "", "", "", "", "");
+        this.favorito = new favoritoModels_1.Favorito("", "", "", 0, "", "", "");
         console.log(this.favorito);
     };
     FavoritoAddComponents.prototype.onSubmit = function () {

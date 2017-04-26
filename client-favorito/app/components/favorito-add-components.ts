@@ -26,7 +26,7 @@ export class FavoritoAddComponents implements OnInit{
   }
 
   ngOnInit(){
-    this.favorito = new Favorito("", "", "", "", "", "", "");
+    this.favorito = new Favorito("", "", "", 0, "", "", "");
     console.log(this.favorito);
   }
 
