@@ -1,6 +1,6 @@
 //Importar Component desde el núcleo de Angular
 import {Component, OnInit} from '@angular/core';
-import {Router, ActivatedRoute, Params} from '@angular/router'
+import {Router, ActivatedRoute, Params} from '@angular/router';
 import {FavoritoService} from '../services/favoritoServices';
 import {Favorito} from '../models/favoritoModels';
 

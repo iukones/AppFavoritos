@@ -1,8 +1,13 @@
 
 <div class="favorito-box" *ngIf="favorito">
-  
+
   <h1>{{favorito.name}}</h1>
-  <p class="url">{{favorito.url}}</p>
   <p class="description">{{favorito.description}}</p>
+  <ul>
+    <li><p class="url">url: {{favorito.url}}</p></li>
+    <li><p class="picture">Vista Previa: {{favorito.picture}}</p></li>
+    <li><p class="category">categoria: {{favorito.category}}</p></li>
+    <li><p class="price">Precio: {{favorito.price}}</p></li>
+  </ul>
 
 </div>

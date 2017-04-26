@@ -1,0 +1,46 @@
+<div class="favorito-box">
+  <h1>{{title}}</h1>
+  <form #formFavorito="ngForm" (ngSubmit)="onSubmit()">
+
+    <label for="">Titulo:</label>
+    <p>
+      <input type="text" name="name" #name="ngModel" [(ngModel)]="favorito.name" required>
+      <span *ngIf="name.touched && !name.valid">El titulo es obligatorio</span>
+    </p>
+
+    <label for="">Descripción:</label>
+    <p>
+      <textarea name="description" #description="ngModel" [(ngModel)]="favorito.description" rows="8" cols="80" required></textarea>
+      <span *ngIf="description.touched && !description.valid">descripción es requerida</span>
+    </p>
+
+    <label for="">Url:</label>
+    <p>
+      <input type="url" name="url" #url="ngModel" [(ngModel)]="favorito.url" required>
+      <span *ngIf="url.touched && !url.valid">url no valida</span>
+    </p>
+
+    <label for="">Vista Previa:</label>
+    <p>
+      <input type="text" name="picture" #picture="ngModel" [(ngModel)]="favorito.picture" required>
+      <span *ngIf="picture.touched && !picture.valid">imagen requerida</span>
+    </p>
+
+    <label for="">categoria:</label>
+    <p>
+      <input type="text" name="category" #category="ngModel" [(ngModel)]="favorito.category" required>
+      <span *ngIf="category.touched && !category.valid">categoria requerida</span>
+    </p>
+
+    <label for="">Precio:</label>
+    <p>
+      <input type="Number" name="price" #price="ngModel" [(ngModel)]="favorito.price" required>
+      <span *ngIf="price.touched && !price.valid">precio es requerido</span>
+    </p>
+
+    <input type="submit" value="{{title}}">
+
+  </form>
+
+
+</div>
