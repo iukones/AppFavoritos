@@ -6,15 +6,11 @@
   <li *ngFor="let favorito of favoritos" class="favorito-item">
     <div class="content-data">
       <h4>{{favorito.name}}</h4>
-      <!-- <p class="descripcion">{{favorito.description}}</p>
-      <p class="category">{{favorito.category}}</p>
-      <p class="price">{{favorito.price}}</p>
-      <p class="picture">{{favorito.picture}}</p> -->
       <p class="url">{{favorito.url}}</p>
       <p class="buttons">
-        <a href="{{favorito.url}}" class="btn btn-default">Ir al marcador</a>
-        <a [routerLink]="['/marcador', favorito._id]" class="btn btn-ver">ver</a>
-        <a href="{{favorito.url}}" class="btn btn-editar">Editar</a>
+        <a href="{{favorito.url}}" class="btn btn-default"  target="_blank">Ir url</a>
+        <a [routerLink]="['/marcador', favorito._id]" class="btn btn-ver">Ver marcador</a>
+        <a [routerLink]="['/editar-marcador', favorito._id]" class="btn btn-editar">Editar</a>
         <a href="{{favorito.url}}" class="btn btn-Eliminar">Eliminar</a>
       </p>
     </div>
