@@ -60,7 +60,7 @@ header #logo{
   padding: 10px;
   float: right;
   margin-right: 30px;
-  margin-top: 5px;
+  margin-top: 57px;
   background: #eee;
   border-radius: 4px;
   border: 1px solid #ccc;
@@ -159,4 +159,14 @@ footer{
   margin: 0 auto;
   margin-top: 20px;
   color: grey;
+}
+
+.seguro{
+  color: white;
+  width: 22%;
+  position: absolute;
+  margin-top: -121px;
+  background: grey;
+  height: 115px;
+  text-align: center;
 }

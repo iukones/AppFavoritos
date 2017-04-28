@@ -19,8 +19,11 @@ var FavoritosListComponents = (function () {
         this.loading = true;
     }
     FavoritosListComponents.prototype.ngOnInit = function () {
-        var _this = this;
         console.log('FavoritosListComponents cargado!!');
+        this.getFavoritos();
+    };
+    FavoritosListComponents.prototype.getFavoritos = function () {
+        var _this = this;
         this._favoritoService.getFavoritos().subscribe(function (result) {
             console.log(result);
             _this.favoritos = result.favoritos;
@@ -30,6 +33,27 @@ var FavoritosListComponents = (function () {
             else {
                 _this.loading = false;
             }
+        }, function (error) {
+            _this.errorMessage = error;
+            if (_this.errorMessage != null) {
+                console.log(_this.errorMessage);
+                alert('Error en la petición');
+            }
+        });
+    };
+    FavoritosListComponents.prototype.onBorrarConfirm = function (id) {
+        this.confirmado = id;
+    };
+    FavoritosListComponents.prototype.onCancelarConfirm = function (id) {
+        this.confirmado = null;
+    };
+    FavoritosListComponents.prototype.onBorrarFavorito = function (id) {
+        var _this = this;
+        this._favoritoService.deleteFavorito(id).subscribe(function (result) {
+            if (!result.message) {
+                alert('Error en la petición');
+            }
+            _this.getFavoritos();
         }, function (error) {
             _this.errorMessage = error;
             if (_this.errorMessage != null) {
