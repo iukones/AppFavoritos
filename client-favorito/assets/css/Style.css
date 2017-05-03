@@ -1,5 +1,6 @@
 body {
   font-family: Helvetica, Arial;
+  background: darkgray;
 }
 .clearfix {
   float: none;
@@ -158,15 +159,17 @@ footer{
   width: 80%;
   margin: 0 auto;
   margin-top: 20px;
-  color: grey;
+  color: white;
 }
 
 .seguro{
-  color: white;
+  color: #444;
   width: 22%;
   position: absolute;
   margin-top: -121px;
-  background: grey;
+  background: darkgray;
   height: 115px;
   text-align: center;
+  margin-left: -3px;
+  border-radius: 3px;
 }
