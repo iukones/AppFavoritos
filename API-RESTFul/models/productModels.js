@@ -12,7 +12,7 @@ const FavoritoSchema = Schema({
     },
     category: {
         type: String,
-        enum: ['computers', 'phones', 'accesories']
+        enum: ['computadora', 'teléfono', 'accesorio']
     },
     description: String,
     url: String

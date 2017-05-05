@@ -27,6 +27,7 @@ app.use((req, res, next) => {
 
 })
 
+// rutas base
 app.use('/api', api)
 
 module.exports = app
