@@ -28,9 +28,11 @@
 
     <label for="">categoria: </label>
     <p>
-      <input type="text" name="category" #category="ngModel" [(ngModel)]="favorito.category" required>
+      <select name="category" #category="ngModel" [(ngModel)]="favorito.category" required>
+        <option *ngFor="let cat of categorias" [value]="cat">{{cat}}</option>
+      </select>
       <span *ngIf="category.touched && !category.valid">categoria requerida</span>
-    </p>
+    </p>    
 
     <label for="">Precio $: </label>
     <p>

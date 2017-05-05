@@ -15,7 +15,8 @@ import {Favorito} from '../models/favoritoModels';
 export class FavoritoAddComponents implements OnInit{
   public title: string;
   public favorito: Favorito;
-  public errorMessage
+  public errorMessage;
+  public categorias = ['computadora', 'teléfono', 'accesorio']
 
   constructor(
     private _favoritoService: FavoritoService,

@@ -20,6 +20,7 @@ var FavoritoEditComponents = (function () {
         this._favoritoService = _favoritoService;
         this._route = _route;
         this._router = _router;
+        this.categorias = ['computadora', 'teléfono', 'accesorio'];
         this.title = "Editar Marcador Favorito";
     }
     FavoritoEditComponents.prototype.ngOnInit = function () {
