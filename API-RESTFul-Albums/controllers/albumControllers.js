@@ -68,20 +68,17 @@ function updateAlbum(req, res) {
 
 function deleteAlbum(req, res) {
     let albumId = req.params.albumId
+    let update = req.body
 
-    Album.findById(albumId, (err, album) => {
+    Album.findByIdAndRemove(albumId, (err, albumRemoved) => {
         if (err) res.status(500).send({
             message: `Error al borrar el album: ${err}`
         })
-
-        album.remove(err => {
-            if (err) res.status(500).send({
-                message: `Error al borrar el album: ${err}`
-            })
-            res.status(200).send({
-                message: 'El album ha sido eliminado'
-            })
-
+        if(!albumRemoved) res.status(404).send({
+            message: `No se a podido eliminar el album`
+        })
+        res.status(200).send({
+            album: albumRemoved
         })
     })
 

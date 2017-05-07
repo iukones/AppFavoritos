@@ -12,7 +12,7 @@ function getFavorito(req, res) {
             message: `Error al realizar la petición: ${err}`
         })
         if (!favorito) return res.status(404).send({
-            message: `El producto no se donde putas quedo`
+            message: `El producto no se ¿donde putas quedo?`
         })
         res.status(200).send({favorito})
     })
